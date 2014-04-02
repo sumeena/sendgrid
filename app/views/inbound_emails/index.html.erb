@@ -1,0 +1,35 @@
+<h1>Listing inbound_emails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Text</th>
+      <th>Html</th>
+      <th>To</th>
+      <th>From</th>
+      <th>Subject</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @inbound_emails.each do |inbound_email| %>
+      <tr>
+        <td><%= inbound_email.text %></td>
+        <td><%= inbound_email.html %></td>
+        <td><%= inbound_email.to %></td>
+        <td><%= inbound_email.from %></td>
+        <td><%= inbound_email.subject %></td>
+        <td><%= link_to 'Show', inbound_email %></td>
+        <td><%= link_to 'Edit', edit_inbound_email_path(inbound_email) %></td>
+        <td><%= link_to 'Destroy', inbound_email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Inbound email', new_inbound_email_path %>

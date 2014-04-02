@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @inbound_email.text %>
+</p>
+
+<p>
+  <strong>Html:</strong>
+  <%= @inbound_email.html %>
+</p>
+
+<p>
+  <strong>To:</strong>
+  <%= @inbound_email.to %>
+</p>
+
+<p>
+  <strong>From:</strong>
+  <%= @inbound_email.from %>
+</p>
+
+<p>
+  <strong>Subject:</strong>
+  <%= @inbound_email.subject %>
+</p>
+
+<%= link_to 'Edit', edit_inbound_email_path(@inbound_email) %> |
+<%= link_to 'Back', inbound_emails_path %>
